@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '../../Components/Navigation/Navigation';
+import logo from './header-logo.png';
+import './header.module.scss';
 
 function Header() {
 	return (
@@ -7,11 +10,12 @@ function Header() {
 			<div className='row'>
 				<div className='col'>
 					<nav className='navbar navbar-expand-sm navbar-light bg-light'>
-						<a className='navbar-brand' href='/'>
-							<img src='.././img/header-logo.png' alt='Bosa Noga' />
-						</a>
-						<Navigation />
+						<Link className='navbar-brand' to='/'>
+							<img src={logo} alt='logo' />
+						</Link>
+
 						<div className='collapase navbar-collapse' id='navbarMain'>
+							<Navigation />
 							<div>
 								<div className='header-controls-pics'>
 									<div
@@ -19,7 +23,7 @@ function Header() {
 										className='header-controls-pic header-controls-search'></div>
 									{/* Do programmatic navigation on click to /cart.html */}
 									<div className='header-controls-pic header-controls-cart'>
-										<div className='header-controls-cart-full'>1</div>
+										<div className='header-controls-cart-full'></div>
 										<div className='header-controls-cart-menu'></div>
 									</div>
 								</div>

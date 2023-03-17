@@ -1,16 +1,20 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import About from '../../Components/About/About';
+import Catalog from '../../Components/Catalog/Catalog';
+import Contacts from '../../Components/Contacts/Contacts';
+import IndexLoaded from '../../Components/Index-loaded/IndexLoaded';
+import NotFound from '../../Components/NotFound/NotFound';
 
 function Main() {
 	return (
-		<div>
-			<Routes>
-				{/* <Route path='/' element={} />
-				<Route path='/drift' element={} />
-				<Route path='/timeattack' element={} />
-				<Route path='/forza' element={} /> */}
-			</Routes>
-		</div>
+		<Routes>
+			<Route path='/' element={<IndexLoaded />} />
+			<Route path='/about' element={<About />} />
+			<Route path='/Catalog' element={<Catalog />} />
+			<Route path='/Contacts' element={<Contacts />} />
+			<Route path='*' element={<NotFound />} />
+		</Routes>
 	);
 }
 

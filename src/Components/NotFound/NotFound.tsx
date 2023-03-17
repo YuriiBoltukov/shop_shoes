@@ -6,7 +6,7 @@ function NotFound() {
 			<div className='col'>
 				<div className='banner'>
 					<img
-						src='./img/banner.jpg'
+						src='../../../assets/banner.jpg'
 						className='img-fluid'
 						alt='К весне готовы!'
 					/>
