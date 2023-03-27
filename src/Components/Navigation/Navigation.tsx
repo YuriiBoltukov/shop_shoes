@@ -1,27 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navigation.module.scss';
+import style from './navigation.module.scss';
 
 function Navigation() {
 	return (
-		<ul className='navbar-nav'>
-			<li className='nav-item'>
-				<Link to='/' className='nav-link'>
+		<ul className={style.nav}>
+			<li className={style.nav_item}>
+				<Link to='/' className={style.nav_item_link}>
 					Главная
 				</Link>
 			</li>
-			<li className='nav-item'>
-				<Link className='nav-link' to='/catalog'>
+			<li className={style.nav_item}>
+				<Link className={style.nav_item_link} to='/catalog'>
 					Каталог
 				</Link>
 			</li>
-			<li className='nav-item'>
-				<Link className='nav-link' to='/about'>
+			<li className={style.nav_item}>
+				<Link className={style.nav_item_link} to='/about'>
 					О магазине
 				</Link>
 			</li>
-			<li className='nav-item'>
-				<Link className='nav-link' to='/contacts'>
+			<li className={style.nav_item}>
+				<Link className={style.nav_item_link} to='/contacts'>
 					Контакты
 				</Link>
 			</li>

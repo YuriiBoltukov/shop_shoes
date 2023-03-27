@@ -1,42 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../Components/Navigation/Navigation';
+import { cart, search } from '../../assets/icon';
+
 import logo from './header-logo.png';
-import './header.module.scss';
+import style from './header.module.scss';
+import Banner from '../../Components/Banner/Banner';
 
 function Header() {
-	return (
-		<header className='container'>
-			<div className='row'>
-				<div className='col'>
-					<nav className='navbar navbar-expand-sm navbar-light bg-light'>
-						<Link className='navbar-brand' to='/'>
-							<img src={logo} alt='logo' />
-						</Link>
+	const [searchOpen, setSearchOpen] = useState(false);
+	const [value, setValue] = useState('');
 
-						<div className='collapase navbar-collapse' id='navbarMain'>
-							<Navigation />
-							<div>
-								<div className='header-controls-pics'>
-									<div
-										data-id='search-expander'
-										className='header-controls-pic header-controls-search'></div>
-									{/* Do programmatic navigation on click to /cart.html */}
-									<div className='header-controls-pic header-controls-cart'>
-										<div className='header-controls-cart-full'></div>
-										<div className='header-controls-cart-menu'></div>
-									</div>
-								</div>
-								<form
-									data-id='search-form'
-									className='header-controls-search-form form-inline invisible'>
-									<input className='form-control' placeholder='Поиск' />
-								</form>
-							</div>
+	function handleChange(event: any) {
+		setValue(event.target.value);
+	}
+
+	function handleSubmit(event: any) {
+		event.preventDefault();
+		console.log('Submitted value:', value);
+		setSearchOpen(false);
+	}
+
+	return (
+		<header className={style.container}>
+			<div className={style.header}>
+				<Link to='/'>
+					<img src={logo} alt='logo'></img>
+				</Link>
+				<div className={style.header_navigation}>
+					<Navigation />
+					<div className={style.header_controls}>
+						<div className={style.header_controls_btns}>
+							{!searchOpen ? (
+								<span
+									className={style.header_controls_search_icon}
+									onClick={() => {
+										setSearchOpen(!searchOpen);
+									}}>
+									{search}
+								</span>
+							) : null}
 						</div>
-					</nav>
+						<div className={style.header_controls_btn}>
+							<div className={style.header_controls_cart_full}></div>
+							<Link to='/cart' className={style.header_controls_cart_menu}>
+								{cart}
+							</Link>
+						</div>
+					</div>
+					{searchOpen ? (
+						<form
+							className={style.header_controls_search}
+							onSubmit={handleSubmit}>
+							<input
+								className={style.header_controls_search_input}
+								placeholder='Поиск'
+								value={value}
+								onChange={handleChange}
+							/>
+						</form>
+					) : null}
 				</div>
 			</div>
+			<Banner />
 		</header>
 	);
 }

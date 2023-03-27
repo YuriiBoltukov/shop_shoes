@@ -1,5 +1,10 @@
 .catalog {
 	min-height: 600px;
+	&_products {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
 }
 
 .catalog-categories {

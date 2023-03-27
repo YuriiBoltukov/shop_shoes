@@ -1,0 +1,86 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	&_pay {
+		display: block;
+		justify-content: space-between;
+		margin: 12px auto 0;
+		&_systems {
+			width: 46px;
+			height: 28px;
+			border: 2px solid #ffffff;
+			border-radius: 8px;
+			background-color: #ffffff;
+			background-repeat: no-repeat;
+			background-image: url(./footer-sprite.png);
+		}
+		&_systems:not(:first-child) {
+			margin-left: 5px;
+		}
+		&_information {
+			display: flex;
+			flex-direction: column;
+			margin: 0 30px;
+		}
+	}
+	&_info {
+		display: block;
+	}
+	&_contacts {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.footer-pay-systems-paypal {
+	background-position: -2px -6px;
+}
+.footer-pay-systems-master-card {
+	background-position: -54px -8px;
+}
+.footer-pay-systems-visa {
+	background-position: -104px -8px;
+}
+.footer-pay-systems-yandex {
+	background-position: -154px -8px;
+}
+.footer-pay-systems-webmoney {
+	background-position: -2px -46px;
+}
+.footer-pay-systems-qiwi {
+	background-position: -52px -46px;
+}
+
+.footer-social-links {
+	margin-top: 10px;
+}
+.footer-social-link {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	margin: 0 5px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-image: url(./footer-sprite.png);
+}
+.footer-social-link-twitter {
+	background-position: -107px -42px;
+}
+.footer-social-link-vk {
+	background-position: -157px -42px;
+}
+.footer-social-link:hover {
+	cursor: pointer;
+}
+
+.footer-copyright {
+	font-size: 0.8em;
+}
+
+.footer-contacts-phone {
+	display: block;
+}
+
+.footer-contacts-email {
+	display: block;
+}

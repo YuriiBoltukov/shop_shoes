@@ -1,5 +1,9 @@
 export const categories = [
 	{
+		id: 11,
+		title: 'Все',
+	},
+	{
 		id: 12,
 		title: 'Мужская обувь',
 	},

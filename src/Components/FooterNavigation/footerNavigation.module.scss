@@ -1,0 +1,11 @@
+li {
+	margin-left: 0;
+}
+.nav {
+	display: flex;
+	width: 270px;
+	padding: 0;
+	&_item:not(:first-child) {
+		margin-left: 10px;
+	}
+}

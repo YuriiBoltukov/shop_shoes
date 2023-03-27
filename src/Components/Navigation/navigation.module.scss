@@ -2,10 +2,11 @@ ul {
 	list-style: none;
 	display: flex;
 }
-li {
+li:not(:first-child) {
 	margin-left: 10px;
 }
-.navbar-nav {
+.nav {
 	display: flex;
 	list-style: none;
+	padding: 0;
 }

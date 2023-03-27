@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from './footerNavigation.module.scss';
 
 function FooterNavigation() {
 	return (
-		<ul className='nav flex-column'>
-			<li className='nav-item'>
-				<Link to='/about' className='nav-link'>
+		<ul className={style.nav}>
+			<li className={style.nav_item}>
+				<Link to='/about' className={style.nav_link}>
 					О магазине
 				</Link>
 			</li>
-			<li className='nav-item'>
-				<Link to='/catalog' className='nav-link'>
+			<li className={style.nav_item}>
+				<Link to='/catalog' className={style.nav_link}>
 					Каталог
 				</Link>
 			</li>
-			<li className='nav-item'>
-				<Link to='/contacts' className='nav-link'>
+			<li className={style.nav_item}>
+				<Link to='/contacts' className={style.nav_link}>
 					Контакты
 				</Link>
 			</li>
