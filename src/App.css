@@ -77,16 +77,6 @@ section {
 	}
 }
 
-/* Top Sales */
-.top-sales {
-	min-height: 300px;
-}
-
-/* Bootstrap */
-.nav-link.active {
-	color: #ff0000;
-}
-
 h2,
 .h2 {
 	margin-bottom: 1.5em;

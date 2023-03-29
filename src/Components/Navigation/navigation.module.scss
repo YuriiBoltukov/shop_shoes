@@ -9,4 +9,7 @@ li:not(:first-child) {
 	display: flex;
 	list-style: none;
 	padding: 0;
+	&_item:hover {
+		color: aquamarine;
+	}
 }

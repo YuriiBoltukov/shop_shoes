@@ -8,4 +8,7 @@ li {
 	&_item:not(:first-child) {
 		margin-left: 10px;
 	}
+	&_item:hover {
+		color: aquamarine;
+	}
 }

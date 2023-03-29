@@ -9,8 +9,13 @@
 		align-items: center;
 	}
 	&_controls {
+		display: flex;
+		padding: 10px;
 		&_btn {
 			display: flex;
+		}
+		&_btn:not(:first-child) {
+			margin-left: 10px;
 		}
 		&_search_icon svg {
 			width: 20px;
