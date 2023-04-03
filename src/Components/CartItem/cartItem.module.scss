@@ -1,0 +1,45 @@
+.cart_item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 8px;
+	width: 500px;
+	margin: 10px auto 0;
+	&_image img {
+		width: 150px;
+		height: 150px;
+	}
+	&_details {
+		padding: 10px;
+		max-width: 330px;
+	}
+	&_name {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	&_price {
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	&_quantity input {
+		margin-left: 10px;
+		padding: 4px 8px;
+		border-radius: 8px;
+		border: 0.2px solid gray;
+		max-width: 25px;
+	}
+	&_remove {
+		padding: 8px 50px;
+		margin-top: 20px;
+		border-radius: 8px;
+		border: none;
+		cursor: pointer;
+	}
+	&_remove:hover {
+		background-color: cadetblue;
+		color: #fff;
+	}
+}

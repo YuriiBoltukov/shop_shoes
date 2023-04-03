@@ -1,0 +1,10 @@
+.index {
+	&_hits {
+		max-width: 800px;
+		margin: 0 auto;
+		&_wrapper {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+}

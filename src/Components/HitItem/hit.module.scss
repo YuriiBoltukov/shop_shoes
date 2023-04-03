@@ -1,0 +1,24 @@
+.hit {
+	display: inline-flex;
+	flex-direction: column;
+	padding: 24px;
+	max-width: 250px;
+	border: 1px solid gray;
+	border-radius: 25px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	&_image {
+		width: 150px;
+		height: 150px;
+	}
+	&_btn {
+		padding: 10px 20px;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	&_btn:hover {
+		background-color: cadetblue;
+		color: #fff;
+	}
+}
