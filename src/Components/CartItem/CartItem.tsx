@@ -1,28 +1,28 @@
 import React from 'react';
+import style from './cartItem.module.scss';
 
 function CartItem() {
 	return (
-		<tbody>
-			<tr>
-				<td scope='row'>1</td>
-				<td>
-					<a href='/products/1.html'>Босоножки 'MYER'</a>
-				</td>
-				<td>18 US</td>
-				<td>1</td>
-				<td>34 000 руб.</td>
-				<td>34 000 руб.</td>
-				<td>
-					<button className='btn btn-outline-danger btn-sm'>Удалить</button>
-				</td>
-			</tr>
-			<tr>
-				<td colSpan={5} className='text-right'>
-					Общая стоимость
-				</td>
-				<td>34 000 руб.</td>
-			</tr>
-		</tbody>
+		<div className={style.cart_item}>
+			<div className={style.cart_item_image}>
+				<img src='https://via.placeholder.com/150' alt='shoe' />
+			</div>
+			<div className={style.cart_item_details}>
+				<div className={style.cart_item_name}>Мужские кроссовки Nike</div>
+				<div className={style.cart_item_price}>2000 руб.</div>
+				<div className={style.cart_item_quantity}>
+					<label htmlFor='quantity'>Количество:</label>
+					<input
+						type='number'
+						id='quantity'
+						name='quantity'
+						min='1'
+						defaultValue='1'
+					/>
+				</div>
+				<button className={style.cart_item_remove}>Удалить</button>
+			</div>
+		</div>
 	);
 }
 

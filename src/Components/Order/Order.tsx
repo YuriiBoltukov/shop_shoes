@@ -4,37 +4,39 @@ import style from './order.module.scss';
 
 function Order() {
 	const [form, setForm] = useState<DeliveryForm>({
-		tel: 0,
+		tel: '',
 		adress: '',
-		agreement: '',
+		agreement: false,
 	});
-	function updateObjectState<T>(name: string, value: any, state: T): T {
+
+	function updateObjectState<T>(name: keyof T, value: any, state: T): T {
 		return {
 			...state,
 			[name]: value,
 		};
 	}
+
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = event.target;
-		setForm(updateObjectState(name, value, form));
+		const { name, value, type, checked } = event.target as HTMLInputElement;
+		const inputValue = type === 'checkbox' ? checked : value;
+		setForm(updateObjectState(name as keyof DeliveryForm, inputValue, form));
 	};
 
-	function submit(event: any) {
+	function submit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		console.log(form);
 		setForm({
-			tel: 0,
+			tel: '',
 			adress: '',
-			agreement: '',
+			agreement: false,
 		});
 	}
+
 	return (
 		<section className={style.order}>
 			<h2 className={style.order_title}>Оформить заказ</h2>
-			<div
-				className={style.order_form}
-				style={{ maxWidth: '30rem', margin: '0 auto' }}>
-				<form className={style.order_form_body}>
+			<div className={style.order_form}>
+				<form className={style.order_form_body} onSubmit={submit}>
 					<div className={style.order_form_body_group}>
 						<label htmlFor='phone'>Телефон</label>
 						<input
@@ -50,7 +52,7 @@ function Order() {
 						<label htmlFor='address'>Адрес доставки</label>
 						<input
 							className={style.order_form_body_group_control}
-							id='adress'
+							id='address'
 							name='adress'
 							placeholder='Адрес доставки'
 							value={form.adress}
@@ -63,7 +65,7 @@ function Order() {
 							className={style.order_form_body_check_input}
 							id='agreement'
 							name='agreement'
-							value={form.agreement}
+							checked={form.agreement}
 							onChange={handleInputChange}
 						/>
 						<label
@@ -72,10 +74,7 @@ function Order() {
 							Согласен с правилами доставки
 						</label>
 					</div>
-					<button
-						type='submit'
-						className={style.order_form_body_btn}
-						onClick={submit}>
+					<button type='submit' className={style.order_form_body_btn}>
 						Оформить
 					</button>
 				</form>

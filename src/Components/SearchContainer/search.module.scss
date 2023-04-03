@@ -1,0 +1,41 @@
+.search_container {
+	position: relative;
+	display: inline-block;
+}
+
+.search_container input[type='text'] {
+	width: 0;
+	padding: 0;
+	border: none;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 100%;
+	opacity: 0;
+	transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	text-align: left;
+}
+
+.search_container input[type='text'].active {
+	width: 200px;
+	padding: 8px;
+	opacity: 1;
+}
+
+.search_button {
+	position: relative;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.3s ease-in-out;
+}
+.search_button.hidden {
+	opacity: 0;
+}
+
+.search_container.active .search_button {
+	opacity: 0;
+}

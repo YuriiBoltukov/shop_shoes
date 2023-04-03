@@ -1,5 +1,5 @@
 export interface DeliveryForm {
-	tel: number;
+	tel: string;
 	adress: string;
-	agreement: string;
+	agreement: boolean;
 }
