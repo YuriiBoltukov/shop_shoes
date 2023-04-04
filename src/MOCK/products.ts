@@ -1,7 +1,7 @@
 export const products = [
 	{
 		id: 20,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Кроссовки как у Pharrell Williams',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pharrell_williams_sneakers.jpg',
@@ -29,7 +29,7 @@ export const products = [
 	},
 	{
 		id: 21,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли принцессы',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/princess_shoes.jpg',
@@ -56,7 +56,7 @@ export const products = [
 	},
 	{
 		id: 22,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли с окошечками',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_with_windows.jpg',
@@ -82,7 +82,7 @@ export const products = [
 	},
 	{
 		id: 23,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Кеды с насекомым',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/insect_sneakers.jpg',
@@ -109,7 +109,7 @@ export const products = [
 	},
 	{
 		id: 24,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли на выход',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/outgoing_shoes.jpg',
@@ -136,7 +136,7 @@ export const products = [
 	},
 	{
 		id: 25,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли императрицы',
 		images: [
 			"https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/empress's_slippers.jpg",
@@ -163,7 +163,7 @@ export const products = [
 	},
 	{
 		id: 26,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кроссовки с рынка',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_the_market.jpg',
@@ -189,7 +189,7 @@ export const products = [
 	},
 	{
 		id: 27,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кроссовки пёстрые',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/colorful_sneakers.jpg',
@@ -216,7 +216,7 @@ export const products = [
 	},
 	{
 		id: 28,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли-долматинцы',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dalmatian_shoes.jpg',
@@ -243,7 +243,7 @@ export const products = [
 	},
 	{
 		id: 29,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сапоги на показ',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/transparent_boots.jpg',
@@ -270,7 +270,7 @@ export const products = [
 	},
 	{
 		id: 30,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сапоги блестящие',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shiny_boots.jpg',
@@ -297,7 +297,7 @@ export const products = [
 	},
 	{
 		id: 31,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли как у Кэрри',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_like_carrie.jpg',
@@ -324,7 +324,7 @@ export const products = [
 	},
 	{
 		id: 32,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кеды от Оксимирона',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_from_oksimiron.jpg',
@@ -352,7 +352,7 @@ export const products = [
 	},
 	{
 		id: 33,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Знаменитые лабутэны',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/tufli_labuten.jpg',
@@ -379,7 +379,7 @@ export const products = [
 	},
 	{
 		id: 34,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли с шипами',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/spiked_shoes.jpg',
@@ -406,7 +406,7 @@ export const products = [
 	},
 	{
 		id: 35,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кеды классические',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/сlassic_sneakers.jpg',
@@ -434,7 +434,7 @@ export const products = [
 	},
 	{
 		id: 36,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кроссовки Новый Баланс ',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/new_balance_sneakers.jpg',
@@ -460,7 +460,7 @@ export const products = [
 	},
 	{
 		id: 37,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Кроссовки с мехом',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_with_fur.jpg',
@@ -487,7 +487,7 @@ export const products = [
 	},
 	{
 		id: 38,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Кроссовки для девчонок',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_for_girls.jpg',
@@ -514,7 +514,7 @@ export const products = [
 	},
 	{
 		id: 39,
-		category: 15,
+		category: 'Детская обувь',
 		title: 'Кроссовки для маленьких девчонок',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sneakers_for_little_girls.jpg',
@@ -540,7 +540,7 @@ export const products = [
 	},
 	{
 		id: 40,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Нюдовые туфли',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude_shoes.jpg',
@@ -568,7 +568,7 @@ export const products = [
 	},
 	{
 		id: 41,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Ботинки охотника',
 		images: [
 			"https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/hunter's_boots.jpg",
@@ -594,7 +594,7 @@ export const products = [
 	},
 	{
 		id: 42,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сапоги охотницы',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/huntress_boots.jpg',
@@ -622,7 +622,7 @@ export const products = [
 	},
 	{
 		id: 43,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Лодочки',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pumps.jpg',
@@ -649,7 +649,7 @@ export const products = [
 	},
 	{
 		id: 44,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Рыжики',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/rufous.jpg',
@@ -675,7 +675,7 @@ export const products = [
 	},
 	{
 		id: 45,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Диор в рубчик',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/ribbed_dior.jpg',
@@ -701,7 +701,7 @@ export const products = [
 	},
 	{
 		id: 46,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Кружевыне туфли',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace_up_shoes.jpg',
@@ -728,7 +728,7 @@ export const products = [
 	},
 	{
 		id: 47,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Рыбацкая сетка',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/fishing_net.jpg',
@@ -755,7 +755,7 @@ export const products = [
 	},
 	{
 		id: 48,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'LOVE',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/love.jpg',
@@ -781,7 +781,7 @@ export const products = [
 	},
 	{
 		id: 49,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли Жар-птицы',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/firebird_slippers.jpg',
@@ -807,7 +807,7 @@ export const products = [
 	},
 	{
 		id: 50,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Туфли c крыьями',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/shoes_with_wings.jpg',
@@ -835,7 +835,7 @@ export const products = [
 	},
 	{
 		id: 51,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Ботинки для настоящих мужчин',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots_for_real_men.jpg',
@@ -862,7 +862,7 @@ export const products = [
 	},
 	{
 		id: 52,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Больше крыльев',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/more_wings.jpg',
@@ -889,7 +889,7 @@ export const products = [
 	},
 	{
 		id: 53,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Туфли султана',
 		images: [
 			"https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sultan's_shoes.jpg",
@@ -916,7 +916,7 @@ export const products = [
 	},
 	{
 		id: 54,
-		category: 15,
+		category: 'Детская обувь',
 		title: 'Кеды-зебра',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/zebra_sneakers.jpg',
@@ -943,7 +943,7 @@ export const products = [
 	},
 	{
 		id: 55,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Кроссовки обычные',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/regular_sneakers.jpg',
@@ -970,7 +970,7 @@ export const products = [
 	},
 	{
 		id: 56,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Шлепанцы с тисненым логотипом',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-flops_with_embossed_logo.jpg',
@@ -997,7 +997,7 @@ export const products = [
 	},
 	{
 		id: 57,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Блестящий ковбой',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip-shiny_cowboy.jpg',
@@ -1024,7 +1024,7 @@ export const products = [
 	},
 	{
 		id: 58,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Розовый бунтарь',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_rebel.jpg',
@@ -1052,7 +1052,7 @@ export const products = [
 	},
 	{
 		id: 59,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'В стиле нюд',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/nude.jpg',
@@ -1079,7 +1079,7 @@ export const products = [
 	},
 	{
 		id: 60,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Лоферы мечты',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/dream_loafers.jpg',
@@ -1106,7 +1106,7 @@ export const products = [
 	},
 	{
 		id: 61,
-		category: 15,
+		category: 'Детская обувь',
 		title: 'Баленсиага',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/balenciaga.jpg',
@@ -1133,7 +1133,7 @@ export const products = [
 	},
 	{
 		id: 62,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Неодизайн',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/neodesign.jpg',
@@ -1160,7 +1160,7 @@ export const products = [
 	},
 	{
 		id: 63,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Ботильоны со шнурком',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/lace-up_ankle_boots.jpg',
@@ -1187,7 +1187,7 @@ export const products = [
 	},
 	{
 		id: 64,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Без задника',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/backless.jpg',
@@ -1214,7 +1214,7 @@ export const products = [
 	},
 	{
 		id: 65,
-		category: 15,
+		category: 'Детская обувь',
 		title: "Босоножки 'Keira'",
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_keira.jpg',
@@ -1242,7 +1242,7 @@ export const products = [
 	},
 	{
 		id: 66,
-		category: 13,
+		category: 'Женская обувь',
 		title: "Босоножки 'Myer' с завязкой на щиколотке",
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/sandals_myer.jpg',
@@ -1269,7 +1269,7 @@ export const products = [
 	},
 	{
 		id: 67,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Босоножки с резинкой',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/elasticated_sandals.jpg',
@@ -1296,7 +1296,7 @@ export const products = [
 	},
 	{
 		id: 68,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Космические кроссовки',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/space_sneakers.jpg',
@@ -1323,7 +1323,7 @@ export const products = [
 	},
 	{
 		id: 69,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Волосатые копытца',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/hairy_hooves.jpg',
@@ -1350,7 +1350,7 @@ export const products = [
 	},
 	{
 		id: 70,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Бабушкины шлёпки',
 		images: [
 			"https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/grandma's_flip_flops.jpg",
@@ -1377,7 +1377,7 @@ export const products = [
 	},
 	{
 		id: 71,
-		category: 14,
+		category: 'Обувь унисекс',
 		title: 'Вьетнамки с ремешками',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/flip_flops_with_straps.jpg',
@@ -1405,7 +1405,7 @@ export const products = [
 	},
 	{
 		id: 72,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Слипоны',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/slipons.jpg',
@@ -1432,7 +1432,7 @@ export const products = [
 	},
 	{
 		id: 73,
-		category: 15,
+		category: 'Детская обувь',
 		title: 'Супергеройские кеды',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/superhero_sneakers.jpg',
@@ -1458,7 +1458,7 @@ export const products = [
 	},
 	{
 		id: 74,
-		category: 12,
+		category: 'Мужская обувь',
 		title: 'Футуристичные кроссовки',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/futuristic_sneakers.jpg',
@@ -1485,7 +1485,7 @@ export const products = [
 	},
 	{
 		id: 75,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сложная геометрия',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/complex_geometry.jpg',
@@ -1512,7 +1512,7 @@ export const products = [
 	},
 	{
 		id: 76,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Утро кондуктора',
 		images: [
 			"https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/conductor's_morning.jpg",
@@ -1539,7 +1539,7 @@ export const products = [
 	},
 	{
 		id: 77,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сапожки-трубы',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/boots-pipes.jpg',
@@ -1566,7 +1566,7 @@ export const products = [
 	},
 	{
 		id: 78,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Ботильоны',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/ankle_boots.jpg',
@@ -1593,7 +1593,7 @@ export const products = [
 	},
 	{
 		id: 79,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Сетчатая душа',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/mesh_soul.jpg',
@@ -1620,7 +1620,7 @@ export const products = [
 	},
 	{
 		id: 80,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Розовая тигрица',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/pink_tigress.jpg',
@@ -1648,7 +1648,7 @@ export const products = [
 	},
 	{
 		id: 81,
-		category: 13,
+		category: 'Женская обувь',
 		title: 'Канатные туфли',
 		images: [
 			'https://raw.githubusercontent.com/netology-code/ra16-diploma/master/html/img/products/rope_shoes.jpg',

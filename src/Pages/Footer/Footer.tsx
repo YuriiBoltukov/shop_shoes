@@ -1,7 +1,12 @@
 import React from 'react';
 import FooterNavigation from '../../Components/FooterNavigation/FooterNavigation';
-import sprite from './footer-sprite.png';
 import style from './footer.module.scss';
+import webmoney from '../../assets/pngegg.png';
+import paypal from '../../assets/pp.png';
+import mastercard from '../../assets/mastercard.png';
+import visa from '../../assets/visa.png';
+import yandex from '../../assets/yandex.png';
+import qiwi from '../../assets/qiwi.png';
 
 function Footer() {
 	return (
@@ -14,13 +19,25 @@ function Footer() {
 				<div className={style.footer_pay_information}>
 					<div className={style.footer_pay_information_systems}>
 						<h5>Принимаем к оплате:</h5>
-						<div className={style.footer_pay}>
-							<div className={style.footer_pay_systems_paypal}></div>
-							<div className={style.footer_pay_systems_master_card}></div>
-							<div className={style.footer_pay_systems_visa}></div>
-							<div className={style.footer_pay_systems_yandex}></div>
-							<div className={style.footer_pay_systems_webmoney}></div>
-							<div className={style.footer_pay_systems_qiwi}></div>
+						<div className={style.footer_pay_information_sprite}>
+							<span>
+								<img src={paypal} alt='paypal' />
+							</span>
+							<span>
+								<img src={mastercard} alt='mastercard' />
+							</span>
+							<span>
+								<img src={visa} alt='visa' />
+							</span>
+							<span>
+								<img src={yandex} alt='yandex' />
+							</span>
+							<span>
+								<img src={webmoney} alt='webmoney' />
+							</span>
+							<span>
+								<img src={qiwi} alt='qiwi' />
+							</span>
 						</div>
 					</div>
 

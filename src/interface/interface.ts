@@ -6,7 +6,7 @@ export interface DeliveryForm {
 
 export interface Item {
 	id: number;
-	category: number;
+	category: string;
 	title: string;
 	images: string[];
 	sku: string;
