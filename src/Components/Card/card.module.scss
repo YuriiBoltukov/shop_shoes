@@ -7,8 +7,16 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	&_img {
-		width: 150px;
-		height: 150px;
+	&_slider {
+		max-width: 150px;
 	}
+}
+
+.card_img {
+	width: 150px;
+	height: 150px;
+}
+.box {
+	width: 150px;
+	height: 150px;
 }

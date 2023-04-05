@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import style from './catalog.module.scss';
 import { categories } from '../../MOCK/categories';
 import { products } from '../../MOCK/products';
@@ -14,12 +14,12 @@ function Catalog() {
 	}
 
 	return (
-		<section className='catalog'>
-			<h2 className='text-center'>Каталог</h2>
-			<form className='catalog-search-form form-inline'>
-				<input className='form-control' placeholder='Поиск' />
+		<section className={style.catalog}>
+			<h2 className={style.catalog_title}>Каталог</h2>
+			<form className={style.catalog_search}>
+				<input className={style.catalog_search_input} placeholder='Поиск' />
 			</form>
-			<ul className='catalog-categories nav justify-content-center'>
+			<ul className={style.catalog_categories}>
 				{categoriesList.map(el => {
 					return (
 						<li className='nav-item' key={el.id}>
