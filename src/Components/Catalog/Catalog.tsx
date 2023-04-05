@@ -31,11 +31,12 @@ function Catalog() {
 			</form>
 			<ul className={style.catalog_categories}>
 				{categoriesList.map(el => {
+					const isActive = selectedCategory === el.title;
 					return (
-						<li className='nav-item' key={el.id}>
+						<li className={style.catalog_nav} key={el.id}>
 							<a
-								className={`nav-link ${
-									selectedCategory === el.title ? 'active' : ''
+								className={`${style.nav_link} ${
+									isActive ? style.catalog_nav_active : ''
 								}`}
 								href='#!'
 								onClick={() => handleCategoryClick(el.title)}>

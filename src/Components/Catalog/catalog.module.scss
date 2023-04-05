@@ -10,6 +10,28 @@
 		font-size: 1.3rem;
 		margin-bottom: 2em;
 	}
+	&_nav {
+		padding: 6px;
+		border-radius: 15px;
+	}
+	&_nav:not(:first-child) {
+		margin-left: 20px;
+	}
+	&_nav:hover {
+		padding: 6px;
+		background-color: cadetblue;
+		transform: scale(1.02);
+	}
+	&_nav a:hover {
+		color: #fff;
+	}
+	&_nav_active {
+		padding: 6px;
+		border-radius: 15px;
+		background-color: cadetblue;
+		color: #fff;
+	}
+
 	&_search {
 		max-width: 250px;
 		&_input {
