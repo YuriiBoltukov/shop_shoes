@@ -6,18 +6,28 @@ import Card from '../Card/Card';
 
 function Catalog() {
 	const categoriesList = categories;
-	const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+	const [selectedCategory, setSelectedCategory] = useState<string>('Все');
+	const [searchValue, setSearchValue] = useState<string>('');
 	const itemList = products;
 
 	function handleCategoryClick(categoryTitle: string) {
 		setSelectedCategory(categoryTitle);
 	}
 
+	function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
+		setSearchValue(event.target.value);
+	}
+
 	return (
 		<section className={style.catalog}>
 			<h2 className={style.catalog_title}>Каталог</h2>
 			<form className={style.catalog_search}>
-				<input className={style.catalog_search_input} placeholder='Поиск' />
+				<input
+					className={style.catalog_search_input}
+					placeholder='Поиск'
+					value={searchValue}
+					onChange={handleSearchChange}
+				/>
 			</form>
 			<ul className={style.catalog_categories}>
 				{categoriesList.map(el => {
@@ -37,11 +47,18 @@ function Catalog() {
 			</ul>
 			<div className={style.catalog_products}>
 				{itemList
-					.filter(product =>
-						selectedCategory === 'Все'
-							? true
-							: product.category === selectedCategory
-					)
+					.filter(product => {
+						if (selectedCategory === 'Все') {
+							return product.title
+								.toLowerCase()
+								.includes(searchValue.toLowerCase());
+						} else {
+							return (
+								product.category === selectedCategory &&
+								product.title.toLowerCase().includes(searchValue.toLowerCase())
+							);
+						}
+					})
 					.map(product => {
 						return <Card key={product.id} product={product} />;
 					})}
