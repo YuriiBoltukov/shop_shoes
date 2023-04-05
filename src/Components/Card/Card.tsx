@@ -32,13 +32,9 @@ function Card(props: any) {
 					})}
 				</Swiper>
 			</div>
-			<div className='card-body'>
-				<h5 className='card-title'>{props.product.title}</h5>
-				<p className='card-text'>{props.product.price} руб.</p>
-				<a href='!#' className='btn btn-primary'>
-					Заказать
-				</a>
-			</div>
+			<h5 className='card-title'>{props.product.title}</h5>
+			<p className='card-text'>{props.product.price} руб.</p>
+			<button className={style.card_btn}>Заказать</button>
 		</div>
 	);
 }

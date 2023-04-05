@@ -8,14 +8,24 @@ function Catalog() {
 	const categoriesList = categories;
 	const [selectedCategory, setSelectedCategory] = useState<string>('Все');
 	const [searchValue, setSearchValue] = useState<string>('');
+	const [numItemsToShow, setNumItemsToShow] = useState<number>(8); // initial number of items to show
 	const itemList = products;
 
 	function handleCategoryClick(categoryTitle: string) {
 		setSelectedCategory(categoryTitle);
+		setNumItemsToShow(8); // reset number of items to show to 8 when category changes
 	}
 
 	function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
 		setSearchValue(event.target.value);
+		setNumItemsToShow(8); // reset number of items to show to 8 when search changes
+	}
+
+	function handleLoadMoreClick() {
+		// increase number of items to show by 8, or by the remaining number of items if less than 8
+		setNumItemsToShow(prevNumItems =>
+			Math.min(prevNumItems + 8, itemList.length)
+		);
 	}
 
 	return (
@@ -60,9 +70,19 @@ function Catalog() {
 							);
 						}
 					})
+					.slice(0, numItemsToShow) // only show up to the current number of items to show
 					.map(product => {
 						return <Card key={product.id} product={product} />;
 					})}
+			</div>
+			<div className={style.catalog_load}>
+				{numItemsToShow < itemList.length && ( // only show Load More button if there are more items to show
+					<button
+						className={style.catalog_load_btn}
+						onClick={handleLoadMoreClick}>
+						Загрузить ещё
+					</button>
+				)}
 			</div>
 		</section>
 	);

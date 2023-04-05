@@ -2,13 +2,25 @@
 	border: 1px solid gray;
 	width: 200px;
 	padding: 15px 10px;
-	border-radius: 5px;
+	border-radius: 25px;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	&_slider {
 		max-width: 150px;
+	}
+	&_btn {
+		padding: 10px 20px;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	&_btn:hover {
+		background-color: cadetblue;
+		color: #fff;
 	}
 }
 

@@ -31,7 +31,21 @@
 		background-color: cadetblue;
 		color: #fff;
 	}
-
+	&_load {
+		max-width: 150px;
+		margin: 30px auto 0;
+		&_btn {
+			padding: 10px 20px;
+			border-radius: 15px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		&_btn:hover {
+			background-color: cadetblue;
+			color: #fff;
+		}
+	}
 	&_search {
 		max-width: 250px;
 		&_input {
