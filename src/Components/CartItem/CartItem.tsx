@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { CartItemProps } from '../../interface/interface';
 import style from './cartItem.module.scss';
 
-function CartItem({ elem, handleRemove }: CartItemProps) {
+function CartItem({ elem, handleRemove, addToCart }: CartItemProps) {
 	const [amount, setAmount] = useState(1);
 	let resAmount = elem.price * amount;
-	console.log(elem);
+
 	function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
 		event.preventDefault();
 		setAmount(parseInt(event.target.value));
-		console.log(amount);
 	}
 
 	return (

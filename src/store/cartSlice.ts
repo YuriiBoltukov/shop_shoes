@@ -1,38 +1,28 @@
-import { createSlice } from '@reduxjs/toolkit';
-// import { products } from '../MOCK/products';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Item } from '../interface/interface';
+//import { products } from '../MOCK/products';
+
+interface CartState {
+	items: Item[];
+}
+
+const initialState: CartState = {
+	items: [],
+};
 
 const cartSlice = createSlice({
 	name: 'cart',
-	initialState: [],
+	initialState,
 	reducers: {
-		// addToCart: (state, action) => {
-		// 	const { productId, quantity } = action.payload;
-		// 	const product = state.products.find(p => p.id === productId);
-		// 	if (product) {
-		// 		state.push({ ...product, quantity });
-		// 	}
-		// },
-		// removeFromCart: (state, action) => {
-		// 	const { productId } = action.payload;
-		// 	const index = state.findIndex(p => p.id === productId);
-		// 	if (index >= 0) {
-		// 		state.splice(index, 1);
-		// 	}
-		// },
-		// updateQuantity: (state, action) => {
-		// 	const { productId, quantity } = action.payload;
-		// 	const product = state.find(p => p.id === productId);
-		// 	if (product) {
-		// 		product.quantity = quantity;
-		// 	}
-		// },
-		clearCart: state => {
-			state.splice(0, state.length);
+		addItem(state, action: PayloadAction<Item>) {
+			state.items.push(action.payload);
+		},
+		removeItem(state, action: PayloadAction<number>) {
+			state.items = state.items.filter(item => item.id !== action.payload);
 		},
 	},
 });
 
-// export const { addToCart, removeFromCart, updateQuantity, clearCart } =
-// 	cartSlice.actions;
+export const { addItem, removeItem } = cartSlice.actions;
 
 export default cartSlice.reducer;

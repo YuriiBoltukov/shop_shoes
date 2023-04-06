@@ -27,4 +27,5 @@ export interface Item {
 export interface CartItemProps {
 	elem: Item;
 	handleRemove: (id: number) => void;
+	addToCart: (item: Item) => void;
 }

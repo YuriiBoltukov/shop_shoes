@@ -6,6 +6,10 @@ import style from './card.module.scss';
 import { Autoplay, EffectFade } from 'swiper';
 
 function Card(props: any) {
+	function addToCart() {
+		props.addToCart(props.product);
+	}
+
 	return (
 		<div className={style.card}>
 			<div className={style.card_slider}>
@@ -34,7 +38,9 @@ function Card(props: any) {
 			</div>
 			<h5 className='card-title'>{props.product.title}</h5>
 			<p className='card-text'>{props.product.price} руб.</p>
-			<button className={style.card_btn}>Заказать</button>
+			<button className={style.card_btn} onClick={addToCart}>
+				Заказать
+			</button>
 		</div>
 	);
 }

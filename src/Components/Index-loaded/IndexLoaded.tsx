@@ -2,13 +2,10 @@ import { products } from '../../MOCK/products';
 import style from './idexLoaded.module.scss';
 import Catalog from '../Catalog/Catalog';
 import Card from '../Card/Card';
+import getRandomItems from '../../Utils/randomItems';
 
 function IndexLoaded() {
-	const hits = getRandomItems(products);
-	function getRandomItems(items: any[]): any[] {
-		const shuffled = items.sort(() => 0.5 - Math.random());
-		return shuffled.slice(0, 3);
-	}
+	const hits = getRandomItems([...products]);
 
 	return (
 		<div className={style.index}>
