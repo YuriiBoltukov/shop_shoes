@@ -1,13 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper';
+import { addItem } from '../../store/cartSlice';
+import { Item } from '../../interface/interface';
+import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import style from './card.module.scss';
-import { Autoplay, EffectFade } from 'swiper';
+import Modal from '../Modal/Modal';
 
-function Card(props: any) {
+interface CardProps {
+	addToCart?: (id: number) => void;
+	product: Item;
+}
+
+function Card({ product }: CardProps) {
+	const [showModal, setShowModal] = useState(false);
+
 	function addToCart() {
-		props.addToCart(props.product);
+		addItem(product);
+		setShowModal(true);
 	}
 
 	return (
@@ -19,7 +31,7 @@ function Card(props: any) {
 					autoplay={{ delay: 2000 }}
 					loop={true}
 					modules={[Autoplay, EffectFade]}>
-					{props.product.images.map((el: any, i: number) => {
+					{product.images.map((el: any, i: number) => {
 						return (
 							<SwiperSlide key={i}>
 								<div className={style.box}>
@@ -36,11 +48,12 @@ function Card(props: any) {
 					})}
 				</Swiper>
 			</div>
-			<h5 className='card-title'>{props.product.title}</h5>
-			<p className='card-text'>{props.product.price} руб.</p>
+			<h5 className='card-title'>{product.title}</h5>
+			<p className='card-text'>{product.price} руб.</p>
 			<button className={style.card_btn} onClick={addToCart}>
 				Заказать
 			</button>
+			{showModal && <Modal setShowModal={setShowModal} />}
 		</div>
 	);
 }

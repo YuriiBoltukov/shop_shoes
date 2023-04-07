@@ -22,10 +22,10 @@ function Cart() {
 
 	return (
 		<>
-			{cartItems.length ? (
-				<section className={style.cart}>
-					<h2 className={style.cart_title}>Корзина</h2>
-					{cartItems.map((item: Item) => {
+			<section className={style.cart}>
+				<h2 className={style.cart_title}>Корзина</h2>
+				{cartItems.length ? (
+					cartItems.map((item: Item) => {
 						return (
 							<CartItem
 								key={item.id}
@@ -34,14 +34,11 @@ function Cart() {
 								addToCart={addToCart}
 							/>
 						);
-					})}
-				</section>
-			) : (
-				<section className={style.cart}>
-					<h2 className={style.cart_title}>Корзина</h2>
+					})
+				) : (
 					<EmptyCart />
-				</section>
-			)}
+				)}
+			</section>
 
 			<Order />
 		</>
