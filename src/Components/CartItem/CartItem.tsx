@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { CartItemProps } from '../../interface/interface';
 import style from './cartItem.module.scss';
 
-function CartItem({ elem, handleRemove, addToCart }: CartItemProps) {
+
+function CartItem({ elem, handleRemove, addToCart }: any) {
 	const [amount, setAmount] = useState(1);
 	let resAmount = elem.price * amount;
 

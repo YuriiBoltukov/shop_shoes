@@ -3,13 +3,17 @@ import style from './catalog.module.scss';
 import { categories } from '../../MOCK/categories';
 import { products } from '../../MOCK/products';
 import Card from '../Card/Card';
+import {useSelector} from "react-redux";
+import {Item} from "../../interface/interface";
 
 function Catalog() {
 	const categoriesList = categories;
 	const [selectedCategory, setSelectedCategory] = useState<string>('Все');
 	const [searchValue, setSearchValue] = useState<string>('');
 	const [numItemsToShow, setNumItemsToShow] = useState<number>(8);
-	const itemList = products;
+	const itemList =  useSelector(
+		(state: { products: { items: Item[] } }) => state.products.items
+	);
 
 	function handleCategoryClick(categoryTitle: string) {
 		setSelectedCategory(categoryTitle);

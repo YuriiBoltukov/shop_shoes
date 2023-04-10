@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper';
-import { addItem } from '../../store/cartSlice';
 import { Item } from '../../interface/interface';
+import { useDispatch } from 'react-redux';
+import {addItem} from '../../store/cartSlice';
 import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,11 +17,7 @@ interface CardProps {
 
 function Card({ product }: CardProps) {
 	const [showModal, setShowModal] = useState(false);
-
-	function addToCart() {
-		addItem(product);
-		setShowModal(true);
-	}
+	const dispatch = useDispatch()
 
 	return (
 		<div className={style.card}>
@@ -50,7 +47,7 @@ function Card({ product }: CardProps) {
 			</div>
 			<h5 className='card-title'>{product.title}</h5>
 			<p className='card-text'>{product.price} руб.</p>
-			<button className={style.card_btn} onClick={addToCart}>
+			<button className={style.card_btn} onClick={() => dispatch(addItem(product.id))}>
 				Заказать
 			</button>
 			{showModal && <Modal setShowModal={setShowModal} />}
