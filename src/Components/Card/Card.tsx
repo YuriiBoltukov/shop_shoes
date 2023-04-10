@@ -11,7 +11,6 @@ import style from './card.module.scss';
 import Modal from '../Modal/Modal';
 
 interface CardProps {
-	addToCart?: (id: number) => void;
 	product: Item;
 }
 
@@ -47,7 +46,7 @@ function Card({ product }: CardProps) {
 			</div>
 			<h5 className='card-title'>{product.title}</h5>
 			<p className='card-text'>{product.price} руб.</p>
-			<button className={style.card_btn} onClick={() => dispatch(addItem(product.id))}>
+			<button className={style.card_btn} onClick={() => dispatch(addItem({id: product.id, quantity: 1}))}>
 				Заказать
 			</button>
 			{showModal && <Modal setShowModal={setShowModal} />}

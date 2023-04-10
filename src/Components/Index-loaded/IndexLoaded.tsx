@@ -11,9 +11,9 @@ function IndexLoaded() {
     const hits = getRandomItems([...products]);
     const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(getProducts())
-	}, [])
+    useEffect(() => {
+        dispatch(getProducts())
+    }, [])
 
     return (
         <div className={style.index}>

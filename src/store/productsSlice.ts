@@ -15,10 +15,13 @@ const productsSlice = createSlice({
     reducers: {
         getProducts(state: ProductsState) {
             state.items = products
-        }
+        },
+        clearProducts(state: ProductsState) {
+            state.items = []
+        },
     },
 });
 
-export const { getProducts } = productsSlice.actions;
+export const { getProducts, clearProducts } = productsSlice.actions;
 
 export default productsSlice.reducer;

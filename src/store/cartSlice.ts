@@ -1,40 +1,58 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Item } from '../interface/interface';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Item} from '../interface/interface';
+import {Slice} from "@reduxjs/toolkit/src/createSlice";
+
+export interface CartItemInterface {
+  id: Item['id'],
+  quantity: number
+}
 
 interface CartState {
-	items: Item['id'][];
+  items: CartItemInterface[]
 }
-/*
 
-Создать стэйт с товарами - он хранит все товары в себе
-У него есть селекторы, так же, на компоненте
-Они могут возвращаться конкретный товар по переданному индексу
-Могут возвращать список товаров, индексы которых соответсвуют переданному массиву индексов
-
-Эта штука пишется внутри компонента использования
-Нужно описать селектор, который будет возвращать список всех индексов
-
-*/
 const initialState: CartState = {
-	// Items are in the cart
-	items: [20],
+  items: [],
 };
 
-const cartSlice = createSlice({
-	name: 'cart',
-	initialState,
-	reducers: {
-		addItem(state: CartState, action: PayloadAction<Item['id']>) {
-			console.log('reducers:addToCart');
-			state.items.push(action.payload);
-		},
-		removeItem(state: CartState, action: PayloadAction<Item['id']>) {
-			console.log('action.payload', action.payload)
-			state.items = state.items.filter(item => item !== action.payload);
-		},
-	},
-});
+const cartSlice: Slice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    addItem(state: CartState, action: PayloadAction<CartItemInterface>) {
+      const index = state.items.findIndex((item) => item.id === action.payload.id)
 
-export const { addItem, removeItem } = cartSlice.actions;
+      if (index !== -1) {
+        state.items[index].quantity += action.payload.quantity
+      } else {
+        state.items.push({
+          id: action.payload.id,
+          quantity: action.payload.quantity
+        })
+      }
+    },
+    removeItem(state: CartState, action: PayloadAction<CartItemInterface['id']>) {
+      state.items = state.items.filter(item => item.id !== action.payload);
+    },
+    increaseQuantity(state: CartState, action: PayloadAction<CartItemInterface['id']>) {
+      const index = state.items.findIndex((item) => item.id === action.payload)
+
+      if(index !== -1) {
+        state.items[index].quantity++
+      }
+    },
+    decreaseQuantity(state: CartState, action: PayloadAction<CartItemInterface['id']>) {
+      const index = state.items.findIndex((item) => item.id === action.payload)
+
+      if(index !== -1) {
+        state.items[index].quantity--
+      }
+      if(state.items[index].quantity <= 0) {
+        state.items = state.items.filter(item => item.id !== action.payload);
+      }
+    },
+  }
+})
+export const {addItem, removeItem, increaseQuantity, decreaseQuantity,} = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import style from './catalog.module.scss';
 import { categories } from '../../MOCK/categories';
-import { products } from '../../MOCK/products';
 import Card from '../Card/Card';
 import {useSelector} from "react-redux";
 import {Item} from "../../interface/interface";
