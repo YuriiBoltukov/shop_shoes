@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import productsReducer from './productsSlice';
+import searchReducer from './searchSlice'
 import {EnhancedStore} from "@reduxjs/toolkit/src/configureStore";
 
 /**
@@ -9,7 +10,8 @@ import {EnhancedStore} from "@reduxjs/toolkit/src/configureStore";
 const store: EnhancedStore = configureStore({
 	reducer: {
 		cart: cartReducer,
-		products: productsReducer
+		products: productsReducer,
+		search: searchReducer
 	},
 });
 

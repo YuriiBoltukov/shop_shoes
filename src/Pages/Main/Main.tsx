@@ -1,13 +1,22 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import {Route, Routes, useLocation} from 'react-router-dom';
 import About from '../../Components/About/About';
 import Cart from '../../Components/Cart/Cart';
 import Catalog from '../../Components/Catalog/Catalog';
 import Contacts from '../../Components/Contacts/Contacts';
 import IndexLoaded from '../../Components/Index-loaded/IndexLoaded';
 import NotFound from '../../Components/NotFound/NotFound';
+import {useDispatch} from "react-redux";
+import {getProducts} from "../../store/productsSlice";
 
 function Main() {
+	const location = useLocation();
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getProducts())
+	}, [location])
+
 	return (
 		<Routes>
 			<Route path='/' element={<IndexLoaded />} />

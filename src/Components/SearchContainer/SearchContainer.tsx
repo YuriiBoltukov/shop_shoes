@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { search } from '../../assets/icon';
-
+import { useSelector } from 'react-redux';
 import style from './search.module.scss';
 
 function SearchContainer() {

@@ -9,7 +9,22 @@ li:not(:first-child) {
 	display: flex;
 	list-style: none;
 	padding: 0;
-	&_item:hover {
-		color: aquamarine;
+	&_item {
+		padding: 5px 10px;
 	}
+	&_item:hover {
+		background-color: #19a68c;
+		border-radius: 15px;
+		a {
+			color: #fff;
+		}
+	}
+
+}
+.active {
+	padding: 5px 10px;
+	background-color: #19a68c;
+	border-radius: 15px;
+	color: #fff
+
 }
