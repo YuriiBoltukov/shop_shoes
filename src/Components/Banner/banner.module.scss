@@ -18,4 +18,9 @@
 			rgba(161, 179, 191, 0) 98.05%
 		);
 	}
+	&_img {
+		object-fit: cover;
+		height: 360px;
+		width: 100%;
+	}
 }

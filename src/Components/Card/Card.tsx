@@ -3,19 +3,16 @@ import { Autoplay, EffectFade } from 'swiper';
 import { Item } from '../../interface/interface';
 import { useDispatch } from 'react-redux';
 import {addItem} from '../../store/cartSlice';
-import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import style from './card.module.scss';
-import Modal from '../Modal/Modal';
 
 interface CardProps {
 	product: Item;
 }
 
 function Card({ product }: CardProps) {
-	const [showModal, setShowModal] = useState(false);
 	const dispatch = useDispatch()
 
 	return (
@@ -49,7 +46,6 @@ function Card({ product }: CardProps) {
 			<button className={style.card_btn} onClick={() => dispatch(addItem({id: product.id, quantity: 1}))}>
 				Заказать
 			</button>
-			{showModal && <Modal setShowModal={setShowModal} />}
 		</div>
 	);
 }

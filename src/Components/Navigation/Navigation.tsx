@@ -3,10 +3,12 @@ import {Link, useLocation} from 'react-router-dom';
 import style from './navigation.module.scss';
 
 function Navigation() {
-	const location = useLocation()
+	const location = useLocation();
+
 	function isActive(pathname: string) :string {
 		return location.pathname === pathname ? style.active : '';
 	}
+
 	return (
 		<ul className={style.nav}>
 			<li className={style.nav_item}>

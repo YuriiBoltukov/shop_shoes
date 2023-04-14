@@ -1,11 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { search } from '../../assets/icon';
-import { useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import style from './search.module.scss';
+import {searchQuery, SearchState} from "../../store/searchSlice";
 
 function SearchContainer() {
 	const [isActive, setIsActive] = useState(false);
 	const inputRef = useRef<HTMLInputElement | null>(null);
+	const dispatch = useDispatch();
+	const query = useSelector((state: { search: SearchState }) => state.search.searchStr);
+
+	function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
+		dispatch(searchQuery(event.target.value));
+	}
 
 	function handleButtonClick() {
 		setIsActive(true);
@@ -36,6 +43,7 @@ function SearchContainer() {
 				onBlur={handleInputBlur}
 				onKeyDown={handleKeyDown}
 				ref={inputRef}
+				onChange={handleSearchChange}
 			/>
 			<button
 				className={`${style.search_button} ${isActive ? style.hidden : ''}`}

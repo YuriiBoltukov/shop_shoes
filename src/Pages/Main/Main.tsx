@@ -8,6 +8,7 @@ import IndexLoaded from '../../Components/Index-loaded/IndexLoaded';
 import NotFound from '../../Components/NotFound/NotFound';
 import {useDispatch} from "react-redux";
 import {getProducts} from "../../store/productsSlice";
+import InfoCard from "../../Components/InfoCard/InfoCard";
 
 function Main() {
 	const location = useLocation();
@@ -23,6 +24,7 @@ function Main() {
 			<Route path='/about' element={<About />} />
 			<Route path='/cart' element={<Cart />} />
 			<Route path='/Catalog' element={<Catalog />} />
+			<Route path='/Catalog/id#' element={<InfoCard />} />
 			<Route path='/Contacts' element={<Contacts />} />
 			<Route path='*' element={<NotFound />} />
 		</Routes>
