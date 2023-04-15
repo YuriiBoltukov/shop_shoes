@@ -1,7 +1,6 @@
 import Order from '../Order/Order';
 import style from './cart.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { addItem, removeItem } from '../../store/cartSlice';
+import { useSelector } from 'react-redux';
 import EmptyCart from '../EmptyCart/EmptyCart';
 import {CartItemInterface} from "../../store/cartSlice";
 import CartItem from '../CartItem/CartItem';
