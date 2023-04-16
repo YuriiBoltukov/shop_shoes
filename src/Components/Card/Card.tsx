@@ -41,14 +41,14 @@ function Card({product}: CardProps) {
                     slidesPerView={1}
                     autoplay={{delay: 2000}}
                     loop={true}
-                    modules={[Autoplay, EffectFade]}>
+                    modules={[Autoplay,EffectFade]}>
                     {product.images.map((el: any, i: number) => {
                         return (
                             <SwiperSlide key={i}>
                                 <div className={style.box}>
                                     <img
                                         src={el}
-                                        className='card_img'
+                                        className={style.card_img}
                                         width={'150px'}
                                         height={'150px'}
                                         alt="Босоножки 'Keira'"
