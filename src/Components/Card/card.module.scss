@@ -29,7 +29,15 @@
 		width: 200px;
 		padding: 0 30px;
 		text-align: center;
-		margin-bottom: 15px;
+		margin-bottom: 7px;
+		margin-top: 6px;
+		-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		-khtml-user-select: none; /* Konqueror HTML */
+		-moz-user-select: none; /* Old versions of Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 		&_input {
 			width: 50px;
 			border: none;
@@ -65,6 +73,7 @@ input::-webkit-inner-spin-button {
 	width: 150px;
 	height: 150px;
 	object-fit: cover;
+	border-radius: 15px;
 }
 .box {
 	width: 150px;
