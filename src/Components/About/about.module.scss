@@ -1,0 +1,26 @@
+.about {
+  max-width: 1040px;
+  margin: 15px auto 0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  &_title {
+    margin-top: 0;
+    font-size: 30px;
+  }
+  &_text {
+    font-size: 18px;
+  }
+  &_list {
+    font-size: 18px;
+    list-style: none;
+    margin-left: 0;
+    &_item {
+      margin-top: 10px;
+    }
+    &_item:first-child {
+      margin-left: 10px;
+    }
+  }
+}

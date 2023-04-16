@@ -36,7 +36,7 @@ const cartSlice: Slice = createSlice({
     },
     increaseQuantity(state: CartState, action: PayloadAction<CartItemInterface['id']>) {
       const index = state.items.findIndex((item) => item.id === action.payload)
-
+      console.log(action)
       if(index !== -1) {
         state.items[index].quantity++
       }

@@ -1,14 +1,21 @@
-li {
-	margin-left: 0;
-}
+
 .nav {
 	display: flex;
+	flex-direction: column;
 	width: 270px;
 	padding: 0;
-	&_item:not(:first-child) {
-		margin-left: 10px;
+	&_item {
+		margin-top: 20px;
+		font-size: 24px;
+		cursor: pointer;
 	}
-	&_item:hover {
-		color: aquamarine;
+	&_item:not(:first-child) {
+		margin-left: 0px;
+	}
+	&_link:hover {
+		background-color: cadetblue;
+		color: #fff;
+		padding: 8px;
+		border-radius: 20px;
 	}
 }

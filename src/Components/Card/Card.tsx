@@ -1,31 +1,37 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay, EffectFade} from 'swiper';
 import {Item} from '../../interface/interface';
-import {useDispatch} from 'react-redux';
-import {addItem} from '../../store/cartSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {addItem, CartItemInterface, decreaseQuantity, increaseQuantity} from '../../store/cartSlice';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import style from './card.module.scss';
-import {useState} from "react";
 
 interface CardProps {
     product: Item;
 }
 
 function Card({product}: CardProps) {
-    const [amount, setAmount] = useState(0)
     const dispatch = useDispatch()
+    const cartData = useSelector((state: { cart: { items: CartItemInterface[] } }) => searchCartItem(state.cart.items))
 
-    function increment():void {
-        setAmount(amount + 1 )
+    function increment(): void {
+        dispatch(increaseQuantity(product.id))
     }
 
-    function decrement():void {
-        if(amount > 0) {
-            setAmount(amount - 1)
-        }
+    function decrement(): void {
+       dispatch(decreaseQuantity(product.id))
     }
+
+
+
+    function searchCartItem(items: CartItemInterface[]) {
+        return items.find((item) => {
+            return item.id === product.id
+        })
+    }
+    console.log(cartData)
 
     return (
         <div className={style.card}>
@@ -55,14 +61,18 @@ function Card({product}: CardProps) {
             </div>
             <h5 className='card-title'>{product.title}</h5>
             <p className='card-text'>{product.price} руб.</p>
-            <div className={style.card_defineNumber}>
-                <button className={style.card_defineNumber_btn} onClick={() => decrement()}>-</button>
-                <input className={style.card_defineNumber_input} type={"number"} value={amount}/>
-                <button className={style.card_defineNumber_btn} onClick={() => increment()}>+</button>
-            </div>
-            <button className={style.card_btn} onClick={() => dispatch(addItem({id: product.id, quantity: 1}))}>
-                Заказать
-            </button>
+            {
+                cartData ? <div className={style.card_defineNumber}>
+                        <button className={style.card_defineNumber_btn} onClick={() => decrement()}>-</button>
+                        <input className={style.card_defineNumber_input} type={"number"} value={cartData.quantity}/>
+                        <button className={style.card_defineNumber_btn} onClick={() => increment()}>+</button>
+                    </div> :
+                    <button className={style.card_btn} onClick={() => dispatch(addItem({id: product.id, quantity: 1}))}>
+                        Заказать
+                    </button>
+            }
+
+
         </div>
     );
 }
