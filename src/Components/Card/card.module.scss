@@ -23,6 +23,42 @@
 		background-color: cadetblue;
 		color: #fff;
 	}
+	&_defineNumber {
+		display: flex;
+		justify-content: space-between;
+		width: 200px;
+		padding: 0 30px;
+		text-align: center;
+		margin-bottom: 15px;
+		&_input {
+			width: 50px;
+			border: none;
+			outline: none;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-radius: 15px;
+			padding: 0 10px;
+			text-align: center;
+		}
+		&_btn {
+			width: 25px;
+			height: 25px;
+			border-radius: 10px;
+			border: 0;
+			cursor: pointer;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		&_btn:hover {
+			background-color: cadetblue;
+			color: #fff;
+		}
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .card_img {
